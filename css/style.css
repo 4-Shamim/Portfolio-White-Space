@@ -1,0 +1,310 @@
+/*=============== Import Font =============*/
+@import url('https://fonts.googleapis.com/css?family=Nosifer');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+/*============ Body ================*/
+body {
+    background-color: #f1f2f6;
+}
+
+/* =========== Preloader ============ */
+.preloader {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 9999;
+}
+.loader {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #ddd;
+    border-top: 5px solid rgba(0,112,224,1);
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.preloader.complete {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* ============= Menu Or Sidebar =========== */
+.menu-area {
+    position: fixed;
+    width: 250px;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 10px 5px #b1b1b1;
+    background-color: #ffffff;
+    z-index: 10;
+}
+.menu-area .logo a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    background: linear-gradient(to right, #4f6df5 0%, #ff33cc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.nav-menu {
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding: 70px 0;
+}
+.nav-menu ul {
+    margin: 0;
+    padding: 30px 0 0 0;
+}
+.nav-menu ul li {
+    list-style: none;
+    padding: 5px 0;
+}
+.nav-menu ul li a {
+    position: relative;
+    display: inline-block;
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.nav-menu ul li a::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #4f6df5;
+    position: absolute;
+    top: 50%;
+    left: -124px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.nav-menu ul li a:hover {
+    padding-left: 5px;
+    color: #4f6df5;
+}
+.nav-menu ul li a:hover::before {
+    left: -65px;
+}
+
+.nav-menu ul li a.active {
+    padding-left: 5px;
+    color: #4f6df5;
+}
+.nav-menu ul li a.active::before {
+    left: -65px;
+}
+/* ============= Page Wrapper && Layout ============ */
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: 
+        ". sub-page";
+    width: 100%;
+    height: 100%;
+}
+.sub-page {
+    grid-area: sub-page;
+}
+
+/* ============ Section && Page ========== */
+.sub-page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.page {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: #f1f2f6;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 1.5s ease-in;
+    transition: all 1.5s ease;
+}
+.page-content {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 0;
+}
+.page-title .title-text{
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 0 60px;
+}
+.page-title .title-text::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #000000;
+    top: 50%;
+    left: 0;
+}
+.page-title .title-text::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #000000;
+    top: 50%;
+    right: 0;
+}
+
+/* ============= Specific Page ================*/
+
+/* .page-home {
+    width: 100%;
+    min-height: 100vh;
+}
+.page-about {
+    width: 100%;
+    min-height: 100vh;
+    
+}
+.page-protfolio {
+    width: 100%;
+    min-height: 100vh;
+}
+.page-service {
+    width: 100%;
+    min-height: 100vh;
+}
+.page-blog {
+    width: 100%;
+    min-height: 100vh;
+}
+.page-contact {
+    width: 100%;
+    min-height: 100vh;
+} */
+
+.current-page {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+} 
+
+/*=============== Home Section ===============*/
+.page-home .personal-details .hello-text {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.page-home .personal-details .name {
+    font-family: 'Nosifer', cursive;
+}
+.page-home .personal-details .designation {
+    font-weight: 600;
+    font-size: 2rem;
+}
+.page-home .personal-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.page-home .personal-details ul li {
+    position: relative;
+    display: inline;
+    margin: 5px;
+}
+.page-home .personal-details ul li a{
+    display: inline-block;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 600;
+    -webkt-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+.page-home .personal-details ul li a:hover {
+    color: #4f6df5;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/*============== About Section ==============*/
+.about-content  {
+    overflow: hidden;
+}
+
+
+/*============== Protfolio Section ============*/
+
+
+/*============== Service Section ==============*/
+.service-content {
+    overflow: hidden;
+}
+.service-box {
+    overflow: hidden;
+    height: 320px;
+    margin: 15px 0;
+    background-color: #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
