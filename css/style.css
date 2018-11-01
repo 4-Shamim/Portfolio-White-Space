@@ -7,6 +7,24 @@ body {
     background-color: #f1f2f6;
 }
 
+/*============ Predefine Class =============*/
+a.read-more {
+    display: inline-block;
+    padding: 8px 20px;
+    color: #000000;
+    background-color: #dddddd;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    border-radius: 20px;
+}
+a.read-more:hover {
+    background-color: #4f6df5;
+    color: #ffffff;
+}
+
 /* =========== Preloader ============ */
 .preloader {
     position: fixed;
@@ -26,7 +44,7 @@ body {
     width: 100px;
     height: 100px;
     border: 5px solid #ddd;
-    border-top: 5px solid rgba(0,112,224,1);
+    border-top: 5px solid #4f6df5;;
     border-radius: 50%;
     animation: spin 2s linear infinite;
     -webkit-animation: spin 2s linear infinite;
@@ -164,15 +182,20 @@ body {
     background-color: #f1f2f6;
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: all 1.5s ease-in;
+    -webkit-transition: all 1.5s ease;
     transition: all 1.5s ease;
 }
 .page-content {
     width: 100%;
     min-height: 100vh;
-    padding: 100px 0;
+    padding: 50px 0;
 }
-.page-title .title-text{
+
+/* ============ Page Header ========== */
+.page-header {
+    margin-bottom: 30px;
+}
+.page-header .page-title{
     display: inline-block;
     position: relative;
     text-transform: uppercase;
@@ -180,7 +203,7 @@ body {
     font-weight: 600;
     padding: 0 60px;
 }
-.page-title .title-text::before {
+.page-header .page-title::before {
     content: "";
     position: absolute;
     width: 50px;
@@ -189,7 +212,7 @@ body {
     top: 50%;
     left: 0;
 }
-.page-title .title-text::after {
+.page-header .page-title::after {
     content: "";
     position: absolute;
     width: 50px;
@@ -197,6 +220,12 @@ body {
     background-color: #000000;
     top: 50%;
     right: 0;
+}
+.page-header .page-subtitle {
+    color: #6c757d;
+    max-width: 500px;
+    margin: 0 auto;;
+    line-height: 1.4;
 }
 
 /* ============= Specific Page ================*/
@@ -240,6 +269,7 @@ body {
 }
 .page-home .personal-details .name {
     font-family: 'Nosifer', cursive;
+    font-size: 2.5rem;
 }
 .page-home .personal-details .designation {
     font-weight: 600;
@@ -270,10 +300,64 @@ body {
 }
 
 /*============== About Section ==============*/
-.about-content  {
+.about-content {
     overflow: hidden;
 }
+.about-content .about-left img {
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 7px 7px 10px 5px #ddd;
+    border-radius: 5px;
+}
+.about-content .about-details {
+    padding: 30px 0;
+}
+.about-content .about-details .welcome {
+    font-size: 1.5rem;
+    color: #000000;
+}
+.about-content .about-details .name {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    background: linear-gradient(to right, #4f6df5 0%, #ff33cc 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.about-content .about-details .text-dsc {
+    font-size: 1rem;
+    color: #6c757d;
+    letter-spacing: 1px;
+}
 
+.skillContainer {
+    overflow: hidden;
+    margin-top: 20px;
+}
+.skillContainer .skillBox{
+    padding: 10px 0;
+    margin: 10px 0;
+}
+.skillContainer .skillBox .tag{
+    color: #727272;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+}
+.skillContainer .skillBox .skill{
+    padding: 4px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+.skillContainer .skillBox .skill_level{
+    height: 5px;
+    background: linear-gradient(to right, #4f6df5 0%, #ff33cc 100%);
+}
 
 /*============== Protfolio Section ============*/
 
@@ -284,14 +368,46 @@ body {
 }
 .service-box {
     overflow: hidden;
-    height: 320px;
+    min-height: 320px;
     margin: 15px 0;
-    background-color: #ddd;
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 8px 8px  7px 3px #dddddd;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
 }
-
-
-
-
+.service-box:hover {
+    -ms-transform: translateY(5px); /* IE 9 */
+    -webkit-transform: translateY(5px); /* Safari */
+    transform: translateY(5px);
+}
+.service-box .logo {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    font-size: 2rem;
+    background-color: #4f6df5;
+    border-radius: 50%;
+}
+.service-box .logo i {
+    text-align: center;
+    line-height: 120px;
+    color: #ffffff;
+}
+.service-desc {
+    margin: 10px;
+}
+.service-desc h2 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.service-desc p {
+    font-size: 1rem;
+    color: #727272;
+}
 
 
 

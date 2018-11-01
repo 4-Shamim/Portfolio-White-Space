@@ -39,8 +39,14 @@ menu.forEach(function(e) {
 }, false);
 
 /*---------- Preloader ---------- */
-
 var preloader = document.getElementById("preloader");
 window.addEventListener("load", function() {
     preloader.classList.add("complete");
 }, false);
+
+/*--------------- Progress Bar ----------------*/
+var skills = document.querySelectorAll(".skillBox .skill_level");
+skills.forEach(function(e) {
+    var progressValue = e.getAttribute("data-value");
+    e.style.width = progressValue;
+});
