@@ -188,7 +188,7 @@ a.read-more:hover {
 .page-content {
     width: 100%;
     min-height: 100vh;
-    padding: 50px 0;
+    padding: 50px 20px;
 }
 
 /* ============ Page Header ========== */
@@ -337,11 +337,11 @@ a.read-more:hover {
     margin-top: 20px;
 }
 .skillContainer .skillBox{
-    padding: 10px 0;
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 .skillContainer .skillBox .tag{
     color: #727272;
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: 600;
     margin: 0;
@@ -359,16 +359,17 @@ a.read-more:hover {
     background: linear-gradient(to right, #4f6df5 0%, #ff33cc 100%);
 }
 
-/*============== Protfolio Section ============*/
+/*============== Portfolio Section ============*/
 
 
 /*============== Service Section ==============*/
 .service-content {
     overflow: hidden;
+    padding: 0 15px;
 }
 .service-box {
     overflow: hidden;
-    min-height: 320px;
+    min-height: 340px;
     margin: 15px 0;
     padding: 20px;
     background-color: #ffffff;

@@ -50,3 +50,5 @@ skills.forEach(function(e) {
     var progressValue = e.getAttribute("data-value");
     e.style.width = progressValue;
 });
+
+
