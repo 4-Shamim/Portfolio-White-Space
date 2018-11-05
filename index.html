@@ -160,8 +160,8 @@
 
       <!------------ Portfolio ------------->
       <section class="page page-portfolio" id="portfolio">
-        <div class="d-flex page-content">
-          <div class="container align-self-center">
+        <div class="page-content">
+          <div class="container">
             <div class="portfolio-content text-center">
               <div class="page-header text-center">
                 <h2 class="page-title">protfolio</h2>
@@ -172,7 +172,58 @@
                 </p>
               </div>
               <div class="portfolio-details">
-                
+                <div class="portfolio-menu">
+                  <ul>
+                    <li><button class="active" data-filter="*">All</button></li>
+                    <li><button data-filter=".web">Web</button></li>
+                    <li><button data-filter=".graphics">Graphics</button></li>
+                    <li><button data-filter=".ex">Ex</button></li>
+                  </ul>
+                </div>
+                <div class="row portfolio-grid">
+                  <div class="col-sm-12 col-md-6 col-lg-4 portfolio-item graphics">
+                    <img src="images/graphics.jpg" alt="portfolio-image">
+                    <div class="overlay">
+                      <h2>Name</h2>
+                      <a href="" class="my-button">Show Details</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 portfolio-item web">
+                    <img src="images/web-design.jpg" alt="portfolio-image">
+                    <div class="overlay">
+                      <h2>Name</h2>
+                      <a href="" class="my-button">Show Details</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 portfolio-item ex">
+                    <img src="images/owner.jpg" alt="portfolio-image">
+                    <div class="overlay">
+                      <h2>Name</h2>
+                      <a href="" class="my-button">Show Details</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 portfolio-item graphics">
+                    <img src="images/graphics.jpg" alt="portfolio-image">
+                    <div class="overlay">
+                      <h2>Name</h2>
+                      <a href="" class="my-button">Show Details</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 portfolio-item web">
+                    <img src="images/web-design.jpg" alt="portfolio-image">
+                    <div class="overlay">
+                      <h2>Name</h2>
+                      <a href="" class="my-button">Show Details</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 portfolio-item ex">
+                    <img src="images/owner.jpg" alt="portfolio-image">
+                    <div class="overlay">
+                      <h2>Name</h2>
+                      <a href="" class="my-button">Show Details</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -202,7 +253,7 @@
                         <h2>Design</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, alias.</p>
                       </div>
-                      <a class="read-more" href="">Read More</a>
+                      <a class="my-button" href="">Read More</a>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
@@ -214,7 +265,7 @@
                         <h2>Design</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, alias.</p>
                       </div>
-                      <a class="read-more" href="">Read More</a>
+                      <a class="my-button" href="">Read More</a>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
@@ -226,7 +277,7 @@
                         <h2>Design</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, alias.</p>
                       </div>
-                      <a class="read-more" href="">Read More</a>
+                      <a class="my-button" href="">Read More</a>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
@@ -238,7 +289,7 @@
                         <h2>Design</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, alias.</p>
                       </div>
-                      <a class="read-more" href="">Read More</a>
+                      <a class="my-button" href="">Read More</a>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
@@ -250,7 +301,7 @@
                         <h2>Design</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, alias.</p>
                       </div>
-                      <a class="read-more" href="">Read More</a>
+                      <a class="my-button" href="">Read More</a>
                     </div>
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-4">
@@ -262,7 +313,7 @@
                         <h2>Design</h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, alias.</p>
                       </div>
-                      <a class="read-more" href="">Read More</a>
+                      <a class="my-button" href="">Read More</a>
                     </div>
                   </div>
                 </div>
@@ -276,14 +327,14 @@
       <section class="page page-blog" id="blog">
         <div class="d-flex page-content">
           <div class="container align-self-center">
-            <div class="blog-content text-center">
-              <div class="page-header">
+            <div class="blog-content">
+              <div class="page-header text-center">
                 <h2 class="page-title">blog</h2>
                 <p class="page-subtitle">
-                  Lorem ipsum dolor sit
-                  amet consectetur adipisicing elit.
-                  Quaerat, tempore?
-                </p>
+                    Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.
+                  </p>
               </div>
               <div class="blog-details">
 
@@ -297,17 +348,52 @@
       <section class="page page-contact" id="contact">
         <div class="d-flex page-content">
           <div class="container align-self-center">
-            <div class="contact-content text-center">
-              <div class="page-header">
+            <div class="contact-content">
+              <div class="page-header text-center">
                 <h2 class="page-title">Contact</h2>
                 <p class="page-subtitle">
-                  Lorem ipsum dolor sit
-                  amet consectetur adipisicing elit.
-                  Quaerat, tempore?
-                </p>
+                    Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.
+                  </p>
               </div>
               <div class="contact-details">
-
+                <div class="row">
+                  <div class="contact-info col-sm-12 col-md-4">
+                    <div class="contact-info-title">
+                      Contact Us
+                    </div>
+                    <div class="contact-info-item">
+                      <i class="fas fa-mobile-alt"></i>
+                      <p>088++++</p>
+                    </div>
+                    <div class="contact-info-item">
+                      <i class="far fa-envelope"></i>
+                      <p>example@example.com</p>
+                    </div>
+                    <div class="contact-info-item">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <p>22, Banani, Dhaka</p>
+                    </div>
+                  </div>
+                  <div class="contact-form col-sm-12 col-md-8">
+                    <form action="">
+                      <div class="form-group">
+                        <input class="form-control" type="text" name="name" id="name" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="email" name="email" id="email" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" name="subject" id="subject" placeholder="Subject">
+                      </div>
+                      <div class="form-group">
+                        <textarea class="form-control" name="" id="text-area" cols="30" rows="10" placeholder="Enter Your Message..."></textarea>
+                      </div>
+                      <button class="my-button" type="submit">Send</button>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -317,8 +403,10 @@
   </main>
 
   <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- jQuery first, Then Others -->
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/isotope-docs.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/custom.js"></script>
 </body>

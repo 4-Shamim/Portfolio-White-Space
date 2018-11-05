@@ -52,3 +52,43 @@ skills.forEach(function(e) {
 });
 
 
+
+/*---------------- jQuery ---------------*/
+$(document).ready(function() {
+
+  /*----------- Portfolio Menu ---------------*/
+  $(".portfolio-menu ul li button").click(function() {
+    $(".portfolio-menu ul li button").removeClass("active");
+    $(this).addClass("active");
+  });
+  
+  /*----------- Portfolio Masonry ------------*/
+  var $grid = $('.portfolio-grid').isotope({
+    itemSelector: '.portfolio-item',
+    percentPosition: true,
+    masonry: {
+      // use outer width of grid-sizer for columnWidth
+      columnWidth: 0
+    }
+  });
+  
+  $('.portfolio-menu ul li').on( 'click', 'button', function() {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
