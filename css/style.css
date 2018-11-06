@@ -8,6 +8,8 @@ body {
 }
 
 /*============ Predefine Class =============*/
+
+/* Button */
 button.my-button, a.my-button {
     display: inline-block;
     padding: 8px 20px;
@@ -25,6 +27,52 @@ button.my-button, a.my-button {
 button.my-button:hover, a.my-button:hover {
     background-color: #4f6df5;
     color: #ffffff;
+}
+
+/* Form */
+.form-group {
+    position: relative;
+}
+.form-group .error {
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    padding: 2px 6px;
+    z-index: 1;
+    transition: all 1s ease;
+}
+.form-group .error::after {
+    content: "";
+    display: block;
+    clear: both;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid red;
+    left: 4px;
+    top: 100%;
+}
+.form-control {
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: 2px solid #727272;
+    border-radius: 0;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-bottom-color: #007afc;
+    outline: 0;
+    box-shadow: none;
+}
+.has-error {
+    border-color: #ff0000;
+}
+.valid-field {
+    border-color: #00b600;
 }
 
 /* =========== Preloader ============ */
@@ -87,6 +135,10 @@ button.my-button:hover, a.my-button:hover {
     box-shadow: 0 0 10px 5px #b1b1b1;
     background-color: #ffffff;
     z-index: 10;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
 }
 .menu-area .logo a {
     font-family: 'Oswald', sans-serif;
@@ -99,11 +151,52 @@ button.my-button:hover, a.my-button:hover {
     background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+.open-menu {
+    left: 0 !important;
+}
+
+/*============= Responsive Menu ===========*/
+.menu-collapse {
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    top: 50%;
+    right: -30px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    line-height: 70px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%); 
+    transform: translateY(-50%);
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.menu-collapse:hover {
+    background-color: #4f6df5;
+    color: #ffffff;
+}
+.menu-collapse .collapse-icon {
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.rotation-collapse {
+    transform: rotate(180deg);
+}
+/*============ Main Menu ===========*/
 .nav-menu {
     display: block;
     width: 50%;
     margin: auto;
-    padding: 70px 0;
+    padding: 100px 0 70%;
 }
 .nav-menu ul {
     margin: 0;
@@ -227,7 +320,7 @@ button.my-button:hover, a.my-button:hover {
 .page-header .page-subtitle {
     color: #6c757d;
     max-width: 500px;
-    margin: 0 auto;;
+    margin: 0 auto;
     line-height: 1.4;
 }
 
@@ -266,6 +359,25 @@ button.my-button:hover, a.my-button:hover {
 } 
 
 /*=============== Home Section ===============*/
+.page-home {
+    background-image: url(../images/landing-page-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -2;
+}
+.page-home::after {
+    position: absolute;
+    content: "";
+    clear: both;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(238, 238, 238, 0.5);
+    z-index: -1;
+}
 .page-home .personal-details .hello-text {
     font-size: 1.3rem;
     font-weight: 400;
@@ -377,10 +489,10 @@ button.my-button:hover, a.my-button:hover {
     list-style: none;
 }
 .portfolio-menu ul li {
-    display: inline;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 .portfolio-menu ul li button {
-    display: inline-block;
     padding: 8px 20px;
     color: #000000;
     cursor: pointer;
@@ -492,7 +604,7 @@ button.my-button:hover, a.my-button:hover {
 /*=================== Contact Section ============*/
 .contact-details {
     margin-top: 30px;
-    padding: 20px 40px;
+    padding: 30px 40px;
     background-color: #ffffff;
     border-radius: 5px;
 }
@@ -525,9 +637,59 @@ button.my-button:hover, a.my-button:hover {
     padding: 0;
 }
 .contact-form {
-    padding: 10px;
+    padding: 0 10px;
 }
 
+/*--------------- Footer Area ---------------*/
+.footer-area {
+    text-align: center;
+}
+.footer-area .email {
+    position: relative;
+    font-size: 1rem;
+    color: #727272;
+    font-weight: 600;
+}
+.email::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 140%;
+    left: 0;
+    background-color: #4f6df5;
+}
+.footer-area .social {
+    margin-top: 20px;
+}
+.footer-area .social ul {
+    padding: 0;
+    margin: 0;
+}
+.footer-area .social ul li {
+    position: relative;
+    display: inline;
+    margin: 5px;
+}
+.footer-area .social ul li a{
+    display: inline-block;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #727272;
+    border: 2px solid #727272;
+    -webkt-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+.footer-area .social ul li a:hover {
+    color: #4f6df5;
+    border-color: #4f6df5;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
 
 
 

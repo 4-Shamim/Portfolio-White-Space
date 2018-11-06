@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="css/animate.css">
   <!-- Main -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Responsive -->
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -27,6 +29,9 @@
   <!-- Menu Area -->
   <div class="menu-area">
     <nav class="nav-menu">
+      <div class="menu-collapse">
+        <i class="fas fa-chevron-right collapse-icon"></i>
+      </div>
       <div class="logo">
         <a href="" class="logo-link">Portfolio</a>
       </div>
@@ -39,6 +44,19 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="footer-area">
+      <h4 class="email">mdshamim723@gmail.com</h4>
+      <div class="social">
+          <ul>
+              <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href=""><i class="fab fa-twitter"></i></a></li>
+              <li><a href=""><i class="fab fa-instagram"></i></a></li>
+              <li><a href=""><i class="fab fa-github"></i></a></li>
+              <li><a href=""><i class="fab fa-bitbucket"></i></a></li>
+            </ul>
+      </div>
+    </div>
+
   </div>
 
   <!-- Page Or Content Area -->
@@ -331,10 +349,10 @@
               <div class="page-header text-center">
                 <h2 class="page-title">blog</h2>
                 <p class="page-subtitle">
-                    Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat.
-                  </p>
+                  Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi
+                  ut aliquip ex ea commodo consequat.
+                </p>
               </div>
               <div class="blog-details">
 
@@ -352,10 +370,10 @@
               <div class="page-header text-center">
                 <h2 class="page-title">Contact</h2>
                 <p class="page-subtitle">
-                    Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat.
-                  </p>
+                  Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi
+                  ut aliquip ex ea commodo consequat.
+                </p>
               </div>
               <div class="contact-details">
                 <div class="row">
@@ -377,7 +395,10 @@
                     </div>
                   </div>
                   <div class="contact-form col-sm-12 col-md-8">
-                    <form action="">
+                    <div class="contact-info-title">
+                      Let's Keep in Touch
+                    </div>
+                    <form id="contact-form" action="">
                       <div class="form-group">
                         <input class="form-control" type="text" name="name" id="name" placeholder="Name">
                       </div>
@@ -388,7 +409,7 @@
                         <input class="form-control" type="text" name="subject" id="subject" placeholder="Subject">
                       </div>
                       <div class="form-group">
-                        <textarea class="form-control" name="" id="text-area" cols="30" rows="10" placeholder="Enter Your Message..."></textarea>
+                        <textarea class="form-control" name="textarea" id="textarea" cols="30" rows="4" placeholder="Enter Your Message..."></textarea>
                       </div>
                       <button class="my-button" type="submit">Send</button>
                     </form>
