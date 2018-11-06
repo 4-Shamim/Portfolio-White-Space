@@ -360,7 +360,7 @@ button.my-button:hover, a.my-button:hover {
 
 /*=============== Home Section ===============*/
 .page-home {
-    background-image: url(../images/landing-page-img.jpg);
+    background-image: url(../images/home-bg-2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -375,20 +375,23 @@ button.my-button:hover, a.my-button:hover {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgb(238, 238, 238, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
 .page-home .personal-details .hello-text {
     font-size: 1.3rem;
     font-weight: 400;
+    color: #ffffff;
 }
 .page-home .personal-details .name {
     font-family: 'Nosifer', cursive;
     font-size: 2.5rem;
+    color: #ffffff;
 }
 .page-home .personal-details .designation {
     font-weight: 600;
     font-size: 2rem;
+    color: #ffffff;
 }
 .page-home .personal-details ul {
     list-style: none;
@@ -403,7 +406,7 @@ button.my-button:hover, a.my-button:hover {
 .page-home .personal-details ul li a{
     display: inline-block;
     font-size: 18px;
-    color: #000000;
+    color: #ffffff;
     font-weight: 600;
     -webkt-transition: all .3s ease-in;
     transition: all .3s ease-in;
@@ -647,7 +650,7 @@ button.my-button:hover, a.my-button:hover {
 .footer-area .email {
     position: relative;
     font-size: 1rem;
-    color: #727272;
+    color: #000000;
     font-weight: 600;
 }
 .email::after {
@@ -679,8 +682,8 @@ button.my-button:hover, a.my-button:hover {
     height: 30px;
     line-height: 30px;
     font-weight: 600;
-    color: #727272;
-    border: 2px solid #727272;
+    color: #000000;
+    border: 2px solid #000000;
     -webkt-transition: all .3s ease-in;
     transition: all .3s ease-in;
 }
