@@ -109,7 +109,8 @@ $(document).ready(function() {
     highlight: function(element) {
       $(element)
         .closest('.form-control')
-        .addClass('has-error');
+        .addClass('has-error')
+        .removeClass("valid-field");
     },
     unhighlight: function(element) {
       $(element).closest(".form-control")

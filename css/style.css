@@ -25,7 +25,7 @@ button.my-button, a.my-button {
     transition: all 0.5s ease;
 }
 button.my-button:hover, a.my-button:hover {
-    background-color: #4f6df5;
+    background-color: #0030d2;
     color: #ffffff;
 }
 
@@ -64,7 +64,7 @@ button.my-button:hover, a.my-button:hover {
 .form-control:focus {
     color: #495057;
     background-color: #fff;
-    border-bottom-color: #007afc;
+    border-bottom-color: #0030d2;
     outline: 0;
     box-shadow: none;
 }
@@ -94,7 +94,7 @@ button.my-button:hover, a.my-button:hover {
     width: 100px;
     height: 100px;
     border: 5px solid #ddd;
-    border-top: 5px solid #4f6df5;;
+    border-top: 5px solid #0030d2;
     border-radius: 50%;
     animation: spin 2s linear infinite;
     -webkit-animation: spin 2s linear infinite;
@@ -140,9 +140,13 @@ button.my-button:hover, a.my-button:hover {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
-.menu-area .logo a {
+.menu-area .logo {
+    width: 100px;
+    margin: auto;
+}
+/* .menu-area .logo a {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 600;
     text-decoration: none;
@@ -150,6 +154,10 @@ button.my-button:hover, a.my-button:hover {
     -webkit-background-clip: text;
     background-clip: text;
 	-webkit-text-fill-color: transparent;
+} */
+.menu-area .logo img {
+    width: 100%;
+    height: auto;
 }
 .open-menu {
     left: 0 !important;
@@ -179,7 +187,7 @@ button.my-button:hover, a.my-button:hover {
     transition: all .3s ease;
 }
 .menu-collapse:hover {
-    background-color: #4f6df5;
+    background-color: #0030d2;
     color: #ffffff;
 }
 .menu-collapse .collapse-icon {
@@ -223,7 +231,7 @@ button.my-button:hover, a.my-button:hover {
     display: block;
     width: 60px;
     height: 2px;
-    background-color: #4f6df5;
+    background-color: #0030d2;
     position: absolute;
     top: 50%;
     left: -124px;
@@ -235,7 +243,7 @@ button.my-button:hover, a.my-button:hover {
 
 .nav-menu ul li a:hover {
     padding-left: 5px;
-    color: #4f6df5;
+    color: #0030d2;
 }
 .nav-menu ul li a:hover::before {
     left: -65px;
@@ -243,7 +251,7 @@ button.my-button:hover, a.my-button:hover {
 
 .nav-menu ul li a.active {
     padding-left: 5px;
-    color: #4f6df5;
+    color: #0030d2;
 }
 .nav-menu ul li a.active::before {
     left: -65px;
@@ -360,7 +368,7 @@ button.my-button:hover, a.my-button:hover {
 
 /*=============== Home Section ===============*/
 .page-home {
-    background-image: url(../images/home-bg-2.png);
+    background-image: url(../images/landing-page-img2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -375,9 +383,26 @@ button.my-button:hover, a.my-button:hover {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.3);
     z-index: -1;
 }
+@-webkit-keyframes homeLight {
+    0% {
+        box-shadow: 0 0 10px 3px #7f6739;
+    }
+    100% {
+        box-shadow: 0 0 10px 3px #7f6739;
+    }
+}
+@keyframes homeLight {
+    from {
+        box-shadow: 0 0 10px 1px #7f6739;
+    }
+    to {
+        box-shadow: 0 0 10px 5px #7f6739;
+    }
+}
+
 .page-home .personal-details .hello-text {
     font-size: 1.3rem;
     font-weight: 400;
@@ -439,10 +464,11 @@ button.my-button:hover, a.my-button:hover {
     font-size: 2rem;
     font-weight: 600;
     text-transform: capitalize;
-    background: linear-gradient(to right, #4f6df5 0%, #ff33cc 100%);
+    /* background: linear-gradient(to right, #4f6df5 0%, #ff33cc 100%);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+    color: #0030d2;
 }
 .about-content .about-details .text-dsc {
     font-size: 1rem;
@@ -474,7 +500,8 @@ button.my-button:hover, a.my-button:hover {
 }
 .skillContainer .skillBox .skill_level{
     height: 5px;
-    background: linear-gradient(to right, #4f6df5 0%, #ff33cc 100%);
+    /* background: linear-gradient(to right, #4f6df5 0%, #ff33cc 100%); */
+    background-color: #0030d2;
 }
 
 /*============== Portfolio Section ============*/
@@ -508,11 +535,11 @@ button.my-button:hover, a.my-button:hover {
     border-radius: 20px;
 }
 .portfolio-menu ul li button:hover {
-    background-color: #4f6df5;
+    background-color: #0030d2;
     color: #ffffff;
 }
 .portfolio-menu ul li button.active {
-    background-color: #4f6df5;
+    background-color: #0030d2;
     color: #ffffff;
 }
 .portfolio-item {
@@ -538,7 +565,7 @@ button.my-button:hover, a.my-button:hover {
     left: 0;
     border-radius: 5px;
     transform: translate(-100%, -50%);
-    color: #4f6df5;
+    color: #0030d2;
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 600;
@@ -579,7 +606,7 @@ button.my-button:hover, a.my-button:hover {
     height: 120px;
     margin: auto;
     font-size: 2rem;
-    background-color: #4f6df5;
+    background-color: #0030d2;
     border-radius: 50%;
 }
 .service-box .logo i {
@@ -628,7 +655,7 @@ button.my-button:hover, a.my-button:hover {
     height: 40px;
     font-size: 1.5rem;
     line-height: 40px;
-    color: #4f6df5;
+    color: #0030d2;
 }
 .contact-info-item p {
     width: 88%;
@@ -649,6 +676,7 @@ button.my-button:hover, a.my-button:hover {
 }
 .footer-area .email {
     position: relative;
+    text-transform: lowercase;
     font-size: 1rem;
     color: #000000;
     font-weight: 600;
@@ -661,7 +689,7 @@ button.my-button:hover, a.my-button:hover {
     height: 2px;
     top: 140%;
     left: 0;
-    background-color: #4f6df5;
+    background-color: #2d54b6;
 }
 .footer-area .social {
     margin-top: 20px;
@@ -688,8 +716,8 @@ button.my-button:hover, a.my-button:hover {
     transition: all .3s ease-in;
 }
 .footer-area .social ul li a:hover {
-    color: #4f6df5;
-    border-color: #4f6df5;
+    color: #0030d2;
+    border-color: #0030d2;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }

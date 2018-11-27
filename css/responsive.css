@@ -1,5 +1,18 @@
-@media only screen and (min-width: 1136px) {
-    /*--------- Footer Area ----------*/
+@media only screen and (min-width: 1854px) {
+    /*--------- Header Section ----------*/
+    .page-home::before {
+        display: none;
+
+    }
+
+
+}
+@media only screen and (max-width: 1366px) {
+    /*--------- Header Section ----------*/
+    .page-home::before {
+        display: none;
+
+    }
 
 
 }
